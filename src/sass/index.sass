@@ -1,0 +1,95 @@
+//color
+$primary: #3eb392
+$text_color: #3c3c3c
+
+//reset 
+body 
+	-webkit-print-color-adjust: exact
+	color: $text_color
+
+h1, p 
+	margin: 0
+	margin-bottom: 5px
+
+ul 
+	padding : 0
+	margin: 0
+
+
+
+//temp
+.box
+	width: 100px
+	height: 100px
+	background: black
+
+//global
+.wrap 
+	//width: 80%
+	margin: 0 auto
+	width: 700px
+	height: 842px
+	display: block 
+	margin: auto
+
+	padding-top: 50px
+
+//main
+
+//header
+header 
+	padding-bottom: 10px
+
+.top
+	display: flex
+	//align-items: center
+	justify-content: space
+
+	.name
+		flex-grow: 1
+		text-align: center
+		align-self: center
+		text-transform: uppercase
+		font-weight: bold
+		font-size: 2em
+.info
+	display: flex
+	justify-content: space-between
+	margin-top: 20px
+	align-items: center
+
+	li
+		width: 30%
+		list-style: none
+		font-weight: bold
+		text-align: center
+
+// cv_detail
+
+.cv__detail
+	margin-top: 20px
+
+.block
+	padding-top: 10px	
+	border-top: 1px solid $primary
+	display: flex
+	margin-bottom: 30px
+	.block__item
+
+.block__title
+	font-weight: bold
+	text-transform: uppercase
+	width: 25%
+
+	h1 
+		display: table
+		//border-bottom: 2px solid $primary
+		margin: 0
+		font-size: 1em
+
+	&.title-small
+		font-weight: 100px
+		text-transform: uppercase
+
+.block__detail
+	width: 75% 
