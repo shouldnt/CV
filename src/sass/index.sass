@@ -1,6 +1,8 @@
 //color
-$primary: #3eb392
+$primary: #bacac0
 $text_color: #3c3c3c
+
+$text_highlight: #3eb392
 
 //reset 
 body 
@@ -10,12 +12,19 @@ body
 h1, p 
 	margin: 0
 	margin-bottom: 5px
+	margin-top: 5px
+
+p 
+	font-size: 0.8rem
 
 ul 
 	padding : 0
 	margin: 0
 
-
+// global
+.text-highlight
+	color: $text_highlight
+	font-weight: bold
 
 //temp
 .box
@@ -43,26 +52,31 @@ header
 .top
 	display: flex
 	//align-items: center
-	justify-content: space
+
+	.img 
+		width: 25%
 
 	.name
 		flex-grow: 1
-		text-align: center
+		//text-align: center
 		align-self: center
 		text-transform: uppercase
 		font-weight: bold
 		font-size: 2em
 .info
 	display: flex
+	flex-direction: column
 	justify-content: space-between
-	margin-top: 20px
-	align-items: center
+	margin-top: 10px
+	align-items: flex-start
 
 	li
-		width: 30%
+		width: 100%
 		list-style: none
-		font-weight: bold
-		text-align: center
+		text-align: left
+		font-size: 0.8rem
+		margin-bottom: 5px
+		text-transform: none
 
 // cv_detail
 
@@ -80,6 +94,7 @@ header
 	font-weight: bold
 	text-transform: uppercase
 	width: 25%
+	color: $text_highlight
 
 	h1 
 		display: table
@@ -93,3 +108,11 @@ header
 
 .block__detail
 	width: 75% 
+	display: flex
+	.detail-item
+
+	.is-2
+		lost-column: 1/2 2 10px
+
+	.is-3
+		lost-column: 1/3 3 10px
