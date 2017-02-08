@@ -1,10 +1,11 @@
 //color
-$primary: #bacac0
+$primary: #f7f7f7
+$pri_darken: #d4d4d4
 $text_color: #3c3c3c
 
-$text_highlight: #3eb392
+$text_highlight: #161918
+$pri_bg: rgb(21, 161, 204)
 
-//reset 
 body 
 	-webkit-print-color-adjust: exact
 	color: $text_color
@@ -20,6 +21,11 @@ p
 ul 
 	padding : 0
 	margin: 0
+	li 
+		text-decoration: none
+		list-style: none
+		font-size: 0.9em
+		padding: 5px 0
 
 // global
 .text-highlight
@@ -36,83 +42,68 @@ ul
 .wrap 
 	//width: 80%
 	margin: 0 auto
-	width: 700px
+	width: 740px
 	height: 842px
 	display: block 
 	margin: auto
 
-	padding-top: 50px
+	padding-top: 20px
 
-//main
-
-//header
-header 
-	padding-bottom: 10px
-
-.top
+// main
+.layout
 	display: flex
-	//align-items: center
-
-	.img 
-		width: 25%
-
-	.name
-		flex-grow: 1
-		//text-align: center
-		align-self: center
-		text-transform: uppercase
-		font-weight: bold
-		font-size: 2em
+	margin-bottom: 1em
+	.is-column
+		&.is-header
+			background: $pri_bg
+			color: white
+		padding: 10px
+		flex: 1
+		background: $primary
+		&:first-child
+			//margin-right: 10px
+			flex-basis: 30%
+			margin-right: 10px
+		&:nth-child(2n)
+			flex-basis: 70%
+// header
 .info
 	display: flex
-	flex-direction: column
-	justify-content: space-between
-	margin-top: 10px
-	align-items: flex-start
-
-	li
-		width: 100%
-		list-style: none
-		text-align: left
-		font-size: 0.8rem
-		margin-bottom: 5px
-		text-transform: none
-
-// cv_detail
-
-.cv__detail
-	margin-top: 20px
-
+	justify-content: space-around
+	font-weight: 100
+// ----------------------------------block ------------------------------------------
 .block
-	padding-top: 10px	
-	border-top: 1px solid $primary
-	display: flex
-	margin-bottom: 30px
-	.block__item
+	.title
+		color: $pri_bg
 
-.block__title
-	font-weight: bold
-	text-transform: uppercase
-	width: 25%
-	color: $text_highlight
+	.detail
+.detail__name
+	
+.detail__level
+	.process
+		display: relative
+		background: $pri_darken
+		width: 100%
+		height: 3px
+		.child
+			height: 100%
+			background: $pri_bg
+			display: absolute
+			&.is-3
+				width: 30%
+			&.is-4
+				width: 40%
+			&.is-5
+				width: 50%
+			&.is-6
+				width: 60%
+			&.is-7
+				width: 70%
+			&.is-8
+				width: 80%
+			&.is-9
+				width: 90%
+				
 
-	h1 
-		display: table
-		//border-bottom: 2px solid $primary
-		margin: 0
-		font-size: 1em
+		
 
-	&.title-small
-		font-weight: 100px
-		text-transform: uppercase
-
-.block__detail
-	width: 75% 
-	display: flex
-	.detail-item
-
-	.is-2
-		lost-column: 1/2 2 10px
-
-	.is-3
-		lost-column: 1/3 3 10px
