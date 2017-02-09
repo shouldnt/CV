@@ -1,3 +1,7 @@
+//old
+$pri_darken-old: #d4d4d4
+$pri_bg-old: #112131
+
 //color
 $primary: #f1f1f1
 $pri_darken: #d4d4d4
@@ -7,7 +11,7 @@ $text_color: #3c3c3c
 $green: #c3d1d4
 $grey: #e8e8e8
 $text_highlight: #161918
-$pri_bg: #112131
+$pri_bg: #2d2d2d
 
 body 
 	-webkit-print-color-adjust: exact
@@ -20,7 +24,7 @@ h1, p
 	margin-top: 5px
 
 p 
-	font-size: 0.8rem
+	font-size: 0.9rem
 
 ul 
 	padding : 0
@@ -51,6 +55,12 @@ ul
 	margin: auto
 
 	padding-top: 20px
+
+.font 
+	&.bold
+		font-weight: bold !important
+	&.underline
+		text-decoration: underline
 
 // main
 .layout
@@ -107,15 +117,30 @@ ul
 		h2
 			font-size: 1.2em
 			margin: 0.6em 0
-
-
 	.detail
-		h4 
-			text-transform: capitalize
-			margin: 5px 0
+		.detail__block
+			margin-bottom: 10px
+			.sub-title
+				display: flex
+				justify-content: space-between
+				align-items: center
+				h3
+					text-transform: capitalize
+					margin: 5px 0
+					margin-top: 0
+				h4
+					text-transform: capitalize
+					margin: 5px 0
+					margin-top: 0
+				h5
+					text-transform: capitalize
+					margin: 5px 0
+			.sub-detail
+
+
 .detail__name
 
-	
+// skill indicate
 .detail__level
 	.process
 		display: relative
